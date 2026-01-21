@@ -9,6 +9,8 @@ import 'package:task/widgets/AppBar.dart';
 import 'package:task/widgets/Button.dart';
 import 'package:task/widgets/save_images.dart';
 
+//you should create your own secret key through google cloud platform
+
 class UploadToDrivePage extends StatefulWidget {
   @override
   _UploadToDrivePageState createState() => _UploadToDrivePageState();
@@ -32,7 +34,9 @@ class _UploadToDrivePageState extends State<UploadToDrivePage> {
 
   Future<void> _loadJsonString() async {
     jsonString = await rootBundle.loadString(
-      'assets/task-484821-836e3f749557.json',
+      //and replace his with your own secret key file
+      //'assets/your-secrect-key-file.json',
+      '',
     );
 
     _driveUploadService = DriveUploadService(

@@ -2,6 +2,8 @@ import 'package:flutter/services.dart';
 import 'package:googleapis/sheets/v4.dart' as sheets;
 import 'package:googleapis_auth/auth_io.dart';
 
+//you should create your own secret key through google cloud platform
+
 class GoogleSheetsService {
   final String spreadsheetId;
   sheets.SheetsApi? _api;
@@ -10,7 +12,9 @@ class GoogleSheetsService {
 
   Future<void> init() async {
     final json = await rootBundle.loadString(
-      'assets/task-484821-7e3b2c5fab3e.json',
+      //and replace his with your own secret key file
+      //'assets/your-secrect-key-file.json',
+      '',
     );
     final credentials = ServiceAccountCredentials.fromJson(json);
 
